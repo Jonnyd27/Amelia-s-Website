@@ -1,0 +1,20 @@
+﻿@model Web_Dev_Project.Models.Art
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Amelia's Life</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/GeneralPageLayout.css" />
+</head>
+<body>
+    <p>This is about amelias info page.</p>
+    <p>
+        @await Html.PartialAsync("_MyPartialView")
+    </p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@model Web_Dev_Project.Models.Art
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    @using (Html.BeginForm("Edit", "Art"))
+    {
+        @Html.ValidationSummary()
+
+
+        @Html.LabelFor(model => model.PieceName) 
+        @Html.EditorFor(model => model.PieceName) <br />
+        @Html.LabelFor(model => model.Description) 
+        @Html.EditorFor(model => model.Description) <br />
+
+        <input type="submit" value="Save Changes" />}
+    <a onclick="history.go(-1); return false;" href="#">Go back</a> 
+    @await Html.PartialAsync("_MyPartialView")
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amelias Website!</title>
+    <script src="/Script/Javaweek2.js"></script>
+</head>
+<body>
+    <h1>This is Amelia's Webpage'</h1>
+    <p>
+        If you want to change the back ground, click these buttons.
+        The following is just to use up space
+    </p>
+
+    <br />
+    <button id="Rose" type="button" onclick="ChangeBackgroundToRose()">Rose</button>
+    <button id="Owl" type="button" onclick="ChangeBackgroundToOwl()">Owl</button>
+    <button id="Portrait" type="button" onclick="ChangeBackgroundToPortrait()">Portrait</button>
+    @await Html.PartialAsync("_MyPartialView")
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    border-block-color: aquamarine, deeppink;
+    background: url(../Images/Tattooing.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    color: deeppink;
+    text-align: center;
+}
+p {
+    
+    color: deeppink;
+}
+a {
+    color: deeppink;
+}

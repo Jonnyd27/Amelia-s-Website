@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Web_Dev_Project.Models.Art>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListAll</title>
+    <link href="~/CSS~/CSS/CSSForm.css" />
+</head>
+<body>
+    <h1>Here is Amelia's Art!</h1>
+    <a asp-action="Add">Add an entry</a>  <br />
+
+    @foreach (var art in Model)
+    {
+        <h2>@Html.DisplayNameFor(m => m.PieceName) @Html.DisplayFor(m => art.PieceName) </h2>
+        <h2>@Html.DisplayNameFor(m => m.Description) @Html.DisplayFor(m => art.Description) </h2>
+        @Html.ActionLink("Edit this entry", "Edit") <br />
+        @Html.ActionLink("Delete this entry", "Delete")
+
+    }
+    <p>
+        @await Html.PartialAsync("_MyPartialview")
+    </p>
+</body>
+</html>
